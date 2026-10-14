@@ -29,6 +29,6 @@ Architectures and source provenance:
 
 New standalone glue code is covered by the root AGPL-3.0 license, subject to
 retained third-party terms above. Dataset licenses are separate. The two
-included weight archives are the user's original experiments and are copied
-byte-for-byte. No other training weights, datasets or tracking exports are
-included.
+archived checkpoints documented in weights.json are the user's original
+experiments; their metadata and hashes are retained for provenance. Model
+weights, datasets and tracking exports are not included in this repository.
