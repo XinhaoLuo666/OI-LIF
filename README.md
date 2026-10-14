@@ -66,12 +66,12 @@ OI-LIF/
 
 ## Checkpoints
 
-Model weights are not stored in this GitHub repository. [weights.json](weights.json) documents the two archived checkpoints and their SHA-256 hashes. Place separately obtained files at the following paths to use the archived-checkpoint examples:
+Model weights are not stored in this GitHub repository. [weights.json](weights.json) documents the two archived checkpoints and their SHA-256 hashes. Download the files below, then rename and place them at the listed paths to use the archived-checkpoint examples:
 
-| Model / dataset | Checkpoint path relative to the repository root | Final offset |
-|---|---|---:|
-| SDTv3 / HARDVS | `action_recognition/weights/sdtv3_hardvs_oilif.pt` | 2 |
-| SpikeYOLO / GEN1 | `object_detection/weights/gen1_oilif.pt` | 2 |
+| Model / dataset | Download | Checkpoint path relative to the repository root | Final offset |
+|---|---|---|---:|
+| SDTv3 / HARDVS | [Google Drive](https://drive.google.com/file/d/1tp1LHjtYSzocwcHWF-hXIKAFDCNYvNhT/view?usp=sharing) | `action_recognition/weights/sdtv3_hardvs_oilif.pt` | 2 |
+| SpikeYOLO / GEN1 | [Google Drive](https://drive.google.com/file/d/1d36GJVnq7FR4JTGF9p0K-BusdVaVO_28/view?usp=sharing) | `object_detection/weights/gen1_oilif.pt` | 2 |
 
 ```bash
 mkdir -p action_recognition/weights object_detection/weights
