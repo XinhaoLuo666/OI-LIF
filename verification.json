@@ -1,0 +1,269 @@
+{
+  "date": "2026-10-14",
+  "environment": {
+    "python": "3.11.9",
+    "torch": "2.1.0+cu121",
+    "torchvision": "0.16.0+cu121",
+    "numpy": "1.26.0",
+    "timm": "0.6.13",
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "physical_gpu_index": 7
+  },
+  "checks": {
+    "integer_forward_and_surrogate_gradient": true,
+    "multi_step_and_tensor_activation": true,
+    "membrane_reset_and_offset_schedule": true,
+    "four_architecture_gpu_forward_backward": true,
+    "six_class_configurations_gpu_optimizer_update": true,
+    "original_checkpoint_loading": true,
+    "original_weight_sha256_unchanged": true,
+    "six_real_data_short_training_runs": true,
+    "finite_unscaled_gradients_and_effective_updates": true,
+    "exact_resume_parameters_ema_and_metrics": true,
+    "best_checkpoint_independent_evaluation_matches": true,
+    "classification_selected_checkpoint_loading_fixed": true,
+    "six_filtered_txt_logs": true,
+    "retained_metric_values_and_epoch_counts_verified": true,
+    "filtered_log_sha256_verified": true,
+    "released_logs_contain_no_tracebacks_or_warnings": true,
+    "all_python_files_compile": true,
+    "sdtv3_vth2_archive_and_log_match_source": true,
+    "sdtv3_vth2_automatic_evaluation_threshold": true,
+    "sdtv3_vth2_all_neuron_offsets_set": true,
+    "sdtv3_vth2_original_reference_gpu_logits_match": true,
+    "sdtv3_vth2_real_data_short_inference": true,
+    "all_detection_logs_final_vth2": true,
+    "shd_log_final_vth2": true,
+    "audio_five_seed_statistics_match_manuscript": true,
+    "all_detection_log_peaks_round_to_manuscript": true,
+    "gen1_vth2_original_archive_loading": true,
+    "gen1_vth2_actual_gpu_neuron_offsets": true,
+    "gen1_vth2_real_data_short_inference": true,
+    "legacy_vth1_archive_recipe_preserved": true,
+    "gen1_threshold2_maximumD4_all_89_neurons": true,
+    "gen1_original_public_fp32_fp16_predictions_match": true,
+    "gen1_full_dataset_accuracy_matches_archive": true
+  },
+  "training_report": "training_validation.json",
+  "short_training_results": {
+    "sdtv3_hardvs": {
+      "status": "passed",
+      "epochs": 2,
+      "batches_per_epoch": 3,
+      "successful_optimizer_steps": 4,
+      "max_parameter_update": 0.00014001847011968493,
+      "resume_parameter_match": true,
+      "reload_evaluation_match": true
+    },
+    "resnet34_hardvs": {
+      "status": "passed",
+      "epochs": 2,
+      "batches_per_epoch": 12,
+      "successful_optimizer_steps": 12,
+      "max_parameter_update": 0.0002987198531627655,
+      "resume_parameter_match": true,
+      "reload_evaluation_match": true
+    },
+    "shd": {
+      "status": "passed",
+      "epochs": 2,
+      "batches_per_epoch": 3,
+      "successful_optimizer_steps": 6,
+      "max_parameter_update": 0.010013564489781857,
+      "resume_parameter_match": true,
+      "reload_evaluation_match": true
+    },
+    "ssc": {
+      "status": "passed",
+      "epochs": 2,
+      "batches_per_epoch": 3,
+      "successful_optimizer_steps": 6,
+      "max_parameter_update": 0.010033844038844109,
+      "resume_parameter_match": true,
+      "reload_evaluation_match": true
+    },
+    "yolo_gen1": {
+      "status": "passed",
+      "epochs": 2,
+      "batches_per_epoch": 12,
+      "successful_optimizer_steps": 7,
+      "max_parameter_update": 0.03867197036743164,
+      "resume_parameter_match": true,
+      "reload_evaluation_match": true
+    },
+    "yolo_dsec_det": {
+      "status": "passed",
+      "epochs": 2,
+      "batches_per_epoch": 12,
+      "successful_optimizer_steps": 7,
+      "max_parameter_update": 0.08565568923950195,
+      "resume_parameter_match": true,
+      "reload_evaluation_match": true
+    },
+    "yolo_pku_davis_sod": {
+      "status": "data_unavailable"
+    }
+  },
+  "log_cleanup": {
+    "sdtv3_hardvs": {
+      "input_bytes": 34214,
+      "retained_epochs": 100,
+      "retained_lines": 100,
+      "validation_rows": 100,
+      "status": "selected_vth2_metric_log",
+      "output_bytes": 34214,
+      "output_sha256": "855d8ad8b0b2a5989a3d39c658b4c025dce30b0cbad4e46e13de092b7478905c"
+    },
+    "resnet34_hardvs": {
+      "status": "absent_before_cleanup"
+    },
+    "yolo_gen1": {
+      "status": "selected_vth2_metric_log",
+      "input_bytes": 51473437,
+      "retained_epochs": 200,
+      "retained_lines": 600,
+      "validation_rows": 203,
+      "output_bytes": 51189,
+      "output_sha256": "501ad0042b56145a5155f26597f222a68281ea702907ae4fa5beef734696d207"
+    },
+    "yolo_dsec_det": {
+      "status": "selected_vth2_metric_log",
+      "input_bytes": 12502986,
+      "retained_epochs": 100,
+      "retained_lines": 305,
+      "validation_rows": 103,
+      "output_bytes": 26034,
+      "output_sha256": "bc30c5ddeb3ee1336c21bd1b12e8e433dc65c20d7ceb6f9fa948178835a50851"
+    },
+    "yolo_pku_davis_sod": {
+      "status": "selected_vth2_metric_log",
+      "input_bytes": 11071799,
+      "retained_epochs": 200,
+      "retained_lines": 606,
+      "validation_rows": 204,
+      "output_bytes": 51723,
+      "output_sha256": "4d20a3fce26e20ef2b9f8d6191f585b24d7b19ebaa49a25a49c3da2f1cb109be"
+    },
+    "shd": {
+      "status": "selected_vth2_metric_log",
+      "input_bytes": 87029,
+      "retained_epochs": 20,
+      "retained_lines": 20,
+      "validation_rows": 20,
+      "output_bytes": 1633,
+      "output_sha256": "82e17fead7186cc0281370ff23e707913b468b64df90498e3972759b3d2d31d7"
+    },
+    "ssc": {
+      "input_bytes": 86193,
+      "retained_epochs": 20,
+      "retained_lines": 20,
+      "validation_rows": 20,
+      "status": "cleaned",
+      "output_bytes": 1633,
+      "output_sha256": "873a4d1540e932d25bb7ef02a8c13efe9285498baf97a9aea287d07e78f54a67"
+    }
+  },
+  "full_dataset_retraining": false,
+  "limitations": [
+    "PKU-DAVIS-SOD prepared data are not readable by the current account. Its three-class detector configuration passes synthetic GPU optimizer checks, but real PKU training was not verified.",
+    "The ResNet34 historical text log was already absent before cleanup and was not recreated.",
+    "Two-epoch checks verify training mechanics and checkpoint consistency, not full-dataset convergence or historical performance."
+  ],
+  "released_sdtv3_checkpoint": {
+    "date": "2026-10-14",
+    "physical_gpu_index": 4,
+    "final_offset": 2.0,
+    "source_run": "sdtv3/train16",
+    "checkpoint_file": "action_recognition/weights/sdtv3_hardvs_oilif.pt",
+    "checkpoint_sha256": "603d5e9043d5114bac54cf9d8e1c8a5fe92a1791c5a089407ade09ca118b9c62",
+    "checkpoint_epoch": 99,
+    "log_file": "action_recognition/logs/sdtv3_hardvs.txt",
+    "log_sha256": "855d8ad8b0b2a5989a3d39c658b4c025dce30b0cbad4e46e13de092b7478905c",
+    "log_epochs": 100,
+    "historical_log_peak": 49.799334577643805,
+    "historical_checkpoint_metric": 49.7375909466601,
+    "original_reference_comparison": {
+      "checkpoint_epoch": 99,
+      "final_offset": 2.0,
+      "neuron_count": 105,
+      "real_samples": 2,
+      "input_shape": [
+        2,
+        8,
+        2,
+        224,
+        224
+      ],
+      "logits_max_abs_error": 0.0,
+      "predictions_equal": true,
+      "reference_firing_rule": "round(clamp(v-2,0,4))",
+      "passed": true
+    },
+    "real_data_short_evaluation": {
+      "accuracy": 0.0,
+      "loss": 6.1885223388671875,
+      "samples": 2,
+      "mean_firing_rate": 0.10620095577227161,
+      "pulses": 30699478,
+      "neuron_step_positions": 289069696
+    },
+    "automatic_evaluation_threshold_verified": true,
+    "original_archive_bytes_unchanged": true
+  },
+  "manuscript_alignment_report": "manuscript_alignment.json",
+  "released_gen1_checkpoint": {
+    "final_offset": 2.0,
+    "source_run": "yolo/train110",
+    "physical_gpu_index": 6,
+    "gpu_check": {
+      "physical_gpu_index": 6,
+      "final_offset": 2.0,
+      "offset_source": "train_metrics.threshold",
+      "neuron_count": 89,
+      "input_shape": [
+        1,
+        4,
+        3,
+        288,
+        352
+      ],
+      "prediction_shape": [
+        1,
+        6,
+        2079
+      ],
+      "finite_predictions": true,
+      "repeated_prediction_match": true,
+      "legacy_vth1_archive_recipe_preserved": true,
+      "checkpoint_metric": 0.46657,
+      "pulse_statistics": {
+        "mean_firing_rate": 0.06473676922527158,
+        "pulses": 10782606,
+        "neuron_step_positions": 166560768
+      },
+      "passed": true
+    },
+    "short_evaluation": {
+      "map50": 0.049478021978021994,
+      "map50_95": 0.013946459486804758,
+      "samples": 2,
+      "mean_firing_rate": 0.06483295634179592,
+      "pulses": 10798627,
+      "neuron_step_positions": 166560768
+    },
+    "full_dataset_evaluation": {
+      "map50": 0.7495702104129869,
+      "map50_95": 0.4665699503597476,
+      "samples": 30605,
+      "mean_firing_rate": 0.08276713080250857,
+      "pulses": 210956544528,
+      "neuron_step_positions": 2548796152320,
+      "physical_gpu_index": 6,
+      "precision": "float16",
+      "batch_size": 140,
+      "final_offset": 2.0,
+      "max_spikes": 4
+    }
+  },
+  "gen1_full_dataset_report": "gen1_validation.json"
+}

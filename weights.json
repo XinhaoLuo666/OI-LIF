@@ -1,0 +1,32 @@
+{
+  "checkpoints": [
+    {
+      "file": "action_recognition/weights/sdtv3_hardvs_oilif.pt",
+      "bytes": 301163091,
+      "sha256": "603d5e9043d5114bac54cf9d8e1c8a5fe92a1791c5a089407ade09ca118b9c62",
+      "original_archive_unchanged": true,
+      "final_offset": 2.0,
+      "checkpoint_epoch": 99,
+      "source_file": "sdtv3_before/sdtv3_before/outputs/train16_T8D4_2e_4lr_100ep_nonorm_2th_log/best.pth",
+      "checkpoint_state": "model",
+      "distributed": false
+    },
+    {
+      "file": "object_detection/weights/gen1_oilif.pt",
+      "bytes": 46854494,
+      "sha256": "b1e6fc7f4bc110f306b65659fe3f740d5c9d1f76a20a4079b774047cea090a56",
+      "original_archive_unchanged": true,
+      "final_offset": 2.0,
+      "source_file": "yolov8_aug/runs/detect/train110/weights/best.pt",
+      "checkpoint_metric": 0.46657,
+      "threshold_source": "train_metrics.threshold",
+      "max_spikes": 4,
+      "threshold_memory_value": 2.0,
+      "full_test_map50_95": 0.4665699503597476,
+      "full_test_map50": 0.7495702104129869,
+      "verification_report": "gen1_validation.json",
+      "distributed": false
+    }
+  ],
+  "weights_distributed": false
+}

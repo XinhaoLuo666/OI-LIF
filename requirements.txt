@@ -1,0 +1,10 @@
+# Python 3.11; direct dependencies used by this release, from the validated CUDA environment.
+torch==2.1.0
+torchvision==0.16.0
+numpy==1.26.0
+Pillow==10.4.0
+timm==0.6.13
+opencv-python==4.10.0.84
+PyYAML==6.0.1
+h5py==3.11.0
+tqdm==4.66.5

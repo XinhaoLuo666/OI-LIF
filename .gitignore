@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+runs/
+data/
+*.tmp
+weights/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.bin
+*.pkl
+.env
+.env.*

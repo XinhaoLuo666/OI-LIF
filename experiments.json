@@ -1,0 +1,535 @@
+{
+  "method": "OILIF",
+  "logs": [
+    {
+      "experiment": "sdtv3_hardvs",
+      "model": "SDTv3",
+      "dataset": "HARDVS",
+      "log_file": "action_recognition/logs/sdtv3_hardvs.txt",
+      "epochs_logged": 100,
+      "best_epoch": 94,
+      "best_metric": "test_acc1",
+      "best_value": 49.799334577643805,
+      "offset_at_best": 2,
+      "source_run": "sdtv3/train16",
+      "recipe": {
+        "model": "SDTv3",
+        "dataset": "HARDVS",
+        "epochs": 100,
+        "seed": 42,
+        "batch_per_device": 24,
+        "original_gpus": 8,
+        "lr": 0.00015,
+        "final_offset": 2.0,
+        "schedule": "log",
+        "ramp_epochs": 66,
+        "initialization": "Fine-tuned from a separate SFA pretraining checkpoint; this initial checkpoint is not bundled."
+      },
+      "log_sha256": "855d8ad8b0b2a5989a3d39c658b4c025dce30b0cbad4e46e13de092b7478905c",
+      "selection_scope": "Selected vth=2 logarithmic-ramp SDTv3 run requested for this release.",
+      "weights": "action_recognition/weights/sdtv3_hardvs_oilif.pt",
+      "checkpoint_epoch": 99,
+      "checkpoint_metric": 49.7375909466601,
+      "checkpoint_note": "The unchanged archive contains epoch 99. The epoch-94 log peak was not retained as a separate checkpoint; the released loader uses the epoch-99 model state.",
+      "epoch_indexing": "zero_based",
+      "log_origin": {
+        "kind": "byte_for_byte_copy",
+        "source_file": "sdtv3_before/sdtv3_before/outputs/train16_T8D4_2e_4lr_100ep_nonorm_2th_log/log.txt",
+        "source_sha256": "855d8ad8b0b2a5989a3d39c658b4c025dce30b0cbad4e46e13de092b7478905c"
+      },
+      "log_format": "filtered_json_lines",
+      "records_logged": 100,
+      "duplicate_epoch_records": 0,
+      "log_bytes": 34214,
+      "log_available": true,
+      "log_processing": {
+        "date": "2026-10-14",
+        "kind": "training_and_evaluation_metrics_only",
+        "input_sha256": "855d8ad8b0b2a5989a3d39c658b4c025dce30b0cbad4e46e13de092b7478905c",
+        "input_bytes": 34214,
+        "retained_epochs": 100,
+        "retained_lines": 100,
+        "validation_rows": 100,
+        "rules": "Retain all 100 original JSON epoch records with loss, accuracy, EMA metrics, learning rate and threshold. These source records contain no traceback or warnings; metric values and bytes are unchanged."
+      },
+      "checkpoint_ema_metric": 49.7808114544319,
+      "manuscript_result": {
+        "table": 1,
+        "value_percent": 49.8,
+        "standard_deviation_percent": null,
+        "metric": "accuracy",
+        "final_offset": 2.0,
+        "energy_mj": 5.5,
+        "firing_rate": null,
+        "firing_rate_standard_deviation": null
+      }
+    },
+    {
+      "experiment": "resnet34_hardvs",
+      "model": "ResNet34",
+      "dataset": "HARDVS",
+      "log_file": "action_recognition/logs/resnet34_hardvs.txt",
+      "epochs_logged": 300,
+      "best_epoch": 291,
+      "best_metric": "test_acc1",
+      "best_value": 48.01024429050423,
+      "offset_at_best": 1,
+      "source_run": "sdtv2_0707/resnet34_run54",
+      "recipe": {
+        "model": "ResNet34",
+        "dataset": "HARDVS",
+        "epochs": 300,
+        "seed": 0,
+        "batch_per_device": 48,
+        "original_gpus": 4,
+        "lr": 0.0003,
+        "final_offset": 1.0,
+        "schedule": "cosine",
+        "ramp_epochs": 200,
+        "neuron": "Fixed tau=2, integer quant4, hard reset, detach_reset=False"
+      },
+      "log_sha256": "9269f5c80265228bc18a307ecb09105f6007951db034120c2e7e15b321677ef2",
+      "selection_scope": "Best confirmed scheduled OI-LIF run in the inspected legacy experiment family; baseline and adaptive-neuron runs excluded.",
+      "epoch_indexing": "zero_based",
+      "log_origin": {
+        "kind": "byte_for_byte_copy",
+        "source_file": "sdtv2_0707/outputs/54_hardvs_t8_d4_res34_300ep_3e_4lr_48bs_1th_cos/log.txt",
+        "source_sha256": "9269f5c80265228bc18a307ecb09105f6007951db034120c2e7e15b321677ef2"
+      },
+      "log_format": "original_json_lines",
+      "records_logged": 304,
+      "duplicate_epoch_records": 4,
+      "log_bytes": 71253,
+      "log_available": false,
+      "manuscript_result": {
+        "table": 1,
+        "value_percent": 48.5,
+        "standard_deviation_percent": null,
+        "metric": "accuracy",
+        "final_offset": 1.0,
+        "energy_mj": 1.9,
+        "firing_rate": null,
+        "firing_rate_standard_deviation": null
+      }
+    },
+    {
+      "experiment": "yolo_gen1",
+      "model": "SpikeYOLO",
+      "dataset": "GEN1",
+      "log_file": "object_detection/logs/yolo_gen1.txt",
+      "epochs_logged": 200,
+      "best_epoch": 200,
+      "best_metric": "metrics/mAP50-95(B)",
+      "best_value": 0.46657,
+      "offset_at_best": 2.0,
+      "source_run": "yolo/train110",
+      "recipe": {
+        "model": "SpikeYOLO",
+        "dataset": "GEN1",
+        "epochs": 200,
+        "seed": 0,
+        "batch_size": 140,
+        "lr": 0.01,
+        "final_offset": 2.0,
+        "schedule": "cosine",
+        "ramp_epochs": 133,
+        "image_size": 320,
+        "num_classes": 2
+      },
+      "log_sha256": "501ad0042b56145a5155f26597f222a68281ea702907ae4fa5beef734696d207",
+      "selection_scope": "Selected final-vth=2 experiment matching the manuscript-reported detection result to its printed precision.",
+      "weights": "object_detection/weights/gen1_oilif.pt",
+      "checkpoint_metric": 0.46657,
+      "checkpoint_note": "Original best.pt from final-vth=2 train110; stripped epoch is unavailable. All 89 neuron memories store vth=2, consistent with train_metrics.threshold; the original firing function and released model both use maximum D=4. Full GEN1 inference verification: gen1_validation.json.",
+      "epoch_indexing": "one_based",
+      "log_origin": {
+        "kind": "wandb_raw_console_extraction",
+        "source_file": "yolov8_aug/wandb/offline-run-20241215_205226-72kikhx4/run-72kikhx4.wandb",
+        "source_sha256": "56f43ed3ae10b245d9bd040c3b1057d76eca54ca3eb9a90e18b8a1780b01a572",
+        "wandb_run_id": "72kikhx4",
+        "record_type": "output_raw",
+        "record_count": 362633,
+        "extraction": "Concatenate output_raw.line payloads in on-disk order before filtering original metric lines."
+      },
+      "log_format": "filtered_console_text",
+      "log_bytes": 51189,
+      "log_available": true,
+      "log_processing": {
+        "date": "2026-10-14",
+        "kind": "training_and_evaluation_metrics_only",
+        "input_sha256": "03b793747b07712e8f30121e0e6ad11ed398432aae87740fd503eb46897f4615",
+        "input_bytes": 51473437,
+        "retained_epochs": 200,
+        "retained_lines": 600,
+        "validation_rows": 203,
+        "rules": "Keep original JSON epoch records, audio loss/accuracy epoch lines, final printed YOLO loss row per epoch, all aggregate/class validation rows and numeric W&B metric summaries. Strip ANSI/progress rendering; omit traceback, warnings, setup and model dumps. Metric values are not rewritten."
+      },
+      "source_metrics": {
+        "file": "yolov8_aug/runs/detect/train110/results.csv",
+        "sha256": "b7963698b644a230f456584a0e0b4ea03ee8c2347e847a3cff54d2374527cf6f",
+        "console_values_verified_to_printed_precision": true
+      },
+      "manuscript_result": {
+        "table": 2,
+        "value_percent": 46.7,
+        "standard_deviation_percent": null,
+        "metric": "mAP50:95",
+        "final_offset": 2.0,
+        "energy_mj": 7.2,
+        "firing_rate": null,
+        "firing_rate_standard_deviation": null
+      }
+    },
+    {
+      "experiment": "yolo_dsec_det",
+      "model": "SpikeYOLO",
+      "dataset": "DSEC_DET",
+      "log_file": "object_detection/logs/yolo_dsec_det.txt",
+      "epochs_logged": 100,
+      "best_epoch": 99,
+      "best_metric": "metrics/mAP50-95(B)",
+      "best_value": 0.24882,
+      "offset_at_best": 2.0,
+      "source_run": "yolo/train151",
+      "recipe": {
+        "model": "SpikeYOLO",
+        "dataset": "DSEC_DET",
+        "epochs": 100,
+        "seed": 0,
+        "batch_size": 160,
+        "lr": 0.01,
+        "final_offset": 2.0,
+        "schedule": "log",
+        "ramp_epochs": 66,
+        "image_size": 320,
+        "num_classes": 2
+      },
+      "log_sha256": "bc30c5ddeb3ee1336c21bd1b12e8e433dc65c20d7ceb6f9fa948178835a50851",
+      "selection_scope": "Selected final-vth=2 experiment matching the manuscript-reported detection result to its printed precision.",
+      "epoch_indexing": "one_based",
+      "log_origin": {
+        "kind": "wandb_raw_console_extraction",
+        "source_file": "yolov8_aug/wandb/offline-run-20250103_000025-r69txhom/run-r69txhom.wandb",
+        "source_sha256": "fa45ac2056e72cc9e2cbc1231c4654f8168839ae37fd4271713f1253576da7f1",
+        "wandb_run_id": "r69txhom",
+        "record_type": "output_raw",
+        "record_count": 88823,
+        "extraction": "Concatenate output_raw.line payloads in on-disk order before filtering original metric lines."
+      },
+      "log_format": "filtered_console_text",
+      "log_bytes": 26034,
+      "log_available": true,
+      "log_processing": {
+        "date": "2026-10-14",
+        "kind": "training_and_evaluation_metrics_only",
+        "input_sha256": "b81f7a7f3a4a12f482053308414cbe421a15793758c6899ea2c20e1c730fa0f4",
+        "input_bytes": 12502986,
+        "retained_epochs": 100,
+        "retained_lines": 305,
+        "validation_rows": 103,
+        "rules": "Keep original JSON epoch records, audio loss/accuracy epoch lines, final printed YOLO loss row per epoch, all aggregate/class validation rows and numeric W&B metric summaries. Strip ANSI/progress rendering; omit traceback, warnings, setup and model dumps. Metric values are not rewritten."
+      },
+      "source_metrics": {
+        "file": "yolov8_aug/runs/detect/train151/results.csv",
+        "sha256": "50e5556ceaa4b824fc09c89fc6ecd0f446083fe99aad6c4fd20b74bb4421dd51",
+        "console_values_verified_to_printed_precision": true
+      },
+      "manuscript_result": {
+        "table": 2,
+        "value_percent": 24.9,
+        "standard_deviation_percent": null,
+        "metric": "mAP50:95",
+        "final_offset": 2.0,
+        "energy_mj": 5.3,
+        "firing_rate": null,
+        "firing_rate_standard_deviation": null
+      }
+    },
+    {
+      "experiment": "yolo_pku_davis_sod",
+      "model": "SpikeYOLO",
+      "dataset": "PKU_DAVIS_SOD",
+      "log_file": "object_detection/logs/yolo_pku_davis_sod.txt",
+      "epochs_logged": 200,
+      "best_epoch": 194,
+      "best_metric": "metrics/mAP50-95(B)",
+      "best_value": 0.23653,
+      "offset_at_best": 2.0,
+      "source_run": "yolo/train41",
+      "recipe": {
+        "model": "SpikeYOLO",
+        "dataset": "PKU_DAVIS_SOD",
+        "epochs": 200,
+        "seed": 0,
+        "batch_size": 160,
+        "lr": 0.01,
+        "final_offset": 2.0,
+        "schedule": "log",
+        "ramp_epochs": 133,
+        "image_size": 320,
+        "num_classes": 3
+      },
+      "log_sha256": "4d20a3fce26e20ef2b9f8d6191f585b24d7b19ebaa49a25a49c3da2f1cb109be",
+      "selection_scope": "Selected final-vth=2 experiment matching the manuscript-reported detection result to its printed precision.",
+      "epoch_indexing": "one_based",
+      "log_origin": {
+        "kind": "wandb_raw_console_extraction",
+        "source_file": "yolov8_aug/wandb/offline-run-20241104_120607-an7ifzk6/run-an7ifzk6.wandb",
+        "source_sha256": "01883fa103f8c42b7acb6d1c7fc9d78febb952e83e88062b17f236b3827213c3",
+        "wandb_run_id": "an7ifzk6",
+        "record_type": "output_raw",
+        "record_count": 79351,
+        "extraction": "Concatenate output_raw.line payloads in on-disk order before filtering original metric lines."
+      },
+      "log_format": "filtered_console_text",
+      "log_bytes": 51723,
+      "log_available": true,
+      "log_processing": {
+        "date": "2026-10-14",
+        "kind": "training_and_evaluation_metrics_only",
+        "input_sha256": "2ff6279ef26081ceabefa4e352c83b6aa25d2d67ef9447774d4681e741698ffc",
+        "input_bytes": 11071799,
+        "retained_epochs": 200,
+        "retained_lines": 606,
+        "validation_rows": 204,
+        "rules": "Keep original JSON epoch records, audio loss/accuracy epoch lines, final printed YOLO loss row per epoch, all aggregate/class validation rows and numeric W&B metric summaries. Strip ANSI/progress rendering; omit traceback, warnings, setup and model dumps. Metric values are not rewritten."
+      },
+      "source_metrics": {
+        "file": "yolov8_aug/runs/detect/train41/results.csv",
+        "sha256": "89104bac13ea317e1978d1d3ffdec2d5037638e9140baeee80972e820d510ebf",
+        "console_values_verified_to_printed_precision": true
+      },
+      "manuscript_result": {
+        "table": 2,
+        "value_percent": 23.7,
+        "standard_deviation_percent": null,
+        "metric": "mAP50:95",
+        "final_offset": 2.0,
+        "energy_mj": 6.5,
+        "firing_rate": null,
+        "firing_rate_standard_deviation": null
+      }
+    },
+    {
+      "experiment": "shd",
+      "model": "Residual MLP",
+      "dataset": "SHD",
+      "log_file": "audio_classification/logs/shd.txt",
+      "epochs_logged": 20,
+      "best_epoch": 18,
+      "best_metric": "accuracy",
+      "best_value": 75.61837456,
+      "offset_at_best": 2.0,
+      "source_run": "verified_legacy_sweep/shd/offset2.0/seed41",
+      "recipe": {
+        "model": "Residual MLP",
+        "dataset": "SHD",
+        "epochs": 20,
+        "seed": 41,
+        "batch_size": 256,
+        "lr": 0.01,
+        "final_offset": 2.0,
+        "schedule": "log",
+        "ramp_epochs": 13,
+        "time_steps": 250,
+        "classes": 20,
+        "selection": "Best observed test accuracy; no independent validation split in this archived run."
+      },
+      "log_sha256": "82e17fead7186cc0281370ff23e707913b468b64df90498e3972759b3d2d31d7",
+      "selection_scope": "Representative seed-41 run at final vth=2, matching the manuscript configuration; five-seed statistics are recorded separately.",
+      "epoch_indexing": "zero_based",
+      "log_origin": {
+        "kind": "byte_for_byte_copy",
+        "source_file": "../ssc_shd_log_threshold_sweep/runs/shd/vth_2p0/seed_41/attempt_1.stdout.log",
+        "source_sha256": "55ffee0497d4a5dc094320301a00b72b50880140aa757aafeac1ed24b6a1110e"
+      },
+      "log_format": "filtered_console_text",
+      "log_bytes": 1633,
+      "log_available": true,
+      "log_processing": {
+        "date": "2026-10-14",
+        "kind": "training_and_evaluation_metrics_only",
+        "input_sha256": "55ffee0497d4a5dc094320301a00b72b50880140aa757aafeac1ed24b6a1110e",
+        "input_bytes": 87029,
+        "retained_epochs": 20,
+        "retained_lines": 20,
+        "validation_rows": 20,
+        "rules": "Retain all original epoch loss/accuracy/best/threshold lines in order; omit tracebacks, warnings and setup output. Values retain original console precision."
+      },
+      "manuscript_statistics": {
+        "final_offset": 2.0,
+        "seeds": [
+          40,
+          41,
+          42,
+          43,
+          44
+        ],
+        "selection": "Maximum test accuracy over all 20 epochs per seed",
+        "mean_accuracy": 75.73321554770318,
+        "sample_std_accuracy": 0.9289279860335787,
+        "runs": [
+          {
+            "seed": 40,
+            "overall_best_accuracy": 76.01590106007068,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/shd/vth_2p0/seed_40/training_log.csv",
+            "metrics_sha256": "2c223f2f356bd6ee943b25ebe541749856806c0a0e11ed0210a139c04cd2ede6"
+          },
+          {
+            "seed": 41,
+            "overall_best_accuracy": 75.61837455830388,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/shd/vth_2p0/seed_41/training_log.csv",
+            "metrics_sha256": "85bcd78d5e8965e03d714bbfb69f911ddc05a24fdacde500bdafba46310419aa"
+          },
+          {
+            "seed": 42,
+            "overall_best_accuracy": 76.63427561837456,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/shd/vth_2p0/seed_42/training_log.csv",
+            "metrics_sha256": "bb33a5edf1c0daabfa58d4b979b2fd2fd3d02a8e01862c2d2fa32c90494566a4"
+          },
+          {
+            "seed": 43,
+            "overall_best_accuracy": 76.19257950530036,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/shd/vth_2p0/seed_43/training_log.csv",
+            "metrics_sha256": "777c5b91cd08c5e75fff667747de0024f18fbd2c8d868b9fcdc0372c4176b0b9"
+          },
+          {
+            "seed": 44,
+            "overall_best_accuracy": 74.20494699646643,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/shd/vth_2p0/seed_44/training_log.csv",
+            "metrics_sha256": "d9f86e066ef58b51ae3fa151ca29cf2fded2d8f3b89e6a632c709b3d5288bdc9"
+          }
+        ]
+      },
+      "manuscript_result": {
+        "table": 3,
+        "value_percent": 75.73,
+        "standard_deviation_percent": 0.93,
+        "metric": "accuracy",
+        "final_offset": 2.0,
+        "energy_mj": null,
+        "firing_rate": 0.171,
+        "firing_rate_standard_deviation": 0.006
+      }
+    },
+    {
+      "experiment": "ssc",
+      "model": "Residual MLP",
+      "dataset": "SSC",
+      "log_file": "audio_classification/logs/ssc.txt",
+      "epochs_logged": 20,
+      "best_epoch": 18,
+      "best_metric": "accuracy",
+      "best_value": 63.57570405,
+      "offset_at_best": "2.00000000",
+      "source_run": "verified_legacy_sweep/ssc/offset2.0/seed40",
+      "recipe": {
+        "model": "Residual MLP",
+        "dataset": "SSC",
+        "epochs": 20,
+        "seed": 40,
+        "batch_size": 256,
+        "lr": 0.01,
+        "final_offset": 2.0,
+        "schedule": "log",
+        "ramp_epochs": 13,
+        "time_steps": 250,
+        "classes": 35,
+        "selection": "Best observed test accuracy; no independent validation split in this archived run."
+      },
+      "log_sha256": "873a4d1540e932d25bb7ef02a8c13efe9285498baf97a9aea287d07e78f54a67",
+      "selection_scope": "Best confirmed scheduled OI-LIF run in the inspected legacy experiment family; baseline and adaptive-neuron runs excluded.",
+      "epoch_indexing": "zero_based",
+      "log_origin": {
+        "kind": "byte_for_byte_copy",
+        "source_file": "../ssc_shd_log_threshold_sweep/runs/ssc/vth_2p0/seed_40/attempt_1.stdout.log",
+        "source_sha256": "9c03cb7837b8259008a1d5adbc01d5e26b463e9e58a2b333be2eeb5093385715"
+      },
+      "log_format": "filtered_console_text",
+      "log_bytes": 1633,
+      "log_available": true,
+      "log_processing": {
+        "date": "2026-10-14",
+        "kind": "training_and_evaluation_metrics_only",
+        "input_sha256": "9c03cb7837b8259008a1d5adbc01d5e26b463e9e58a2b333be2eeb5093385715",
+        "input_bytes": 86193,
+        "retained_epochs": 20,
+        "retained_lines": 20,
+        "validation_rows": 20,
+        "rules": "Keep original JSON epoch records, audio loss/accuracy epoch lines, final printed YOLO loss row per epoch, all aggregate/class validation rows and numeric W&B metric summaries. Strip ANSI/progress rendering; omit traceback, warnings, setup and model dumps. Metric values are not rewritten."
+      },
+      "manuscript_statistics": {
+        "final_offset": 2.0,
+        "seeds": [
+          40,
+          41,
+          42,
+          43,
+          44
+        ],
+        "selection": "Maximum test accuracy over all 20 epochs per seed",
+        "mean_accuracy": 63.3971151015602,
+        "sample_std_accuracy": 0.12876557513354125,
+        "runs": [
+          {
+            "seed": 40,
+            "overall_best_accuracy": 63.57570405259543,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/ssc/vth_2p0/seed_40/training_log.csv",
+            "metrics_sha256": "2e837915d14af97732201afa2abd338704bc51760b31f5d784e386d6fde6a0c1"
+          },
+          {
+            "seed": 41,
+            "overall_best_accuracy": 63.42851535668727,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/ssc/vth_2p0/seed_41/training_log.csv",
+            "metrics_sha256": "f0ee4542114205a35794297c0de82387d134d5309de727f2e6f35effbb122735"
+          },
+          {
+            "seed": 42,
+            "overall_best_accuracy": 63.43832793641448,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/ssc/vth_2p0/seed_42/training_log.csv",
+            "metrics_sha256": "813bc12daf82eb9078570189615178f64f295658e5f5a094a0cb1da2a2433463"
+          },
+          {
+            "seed": 43,
+            "overall_best_accuracy": 63.2617015013247,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/ssc/vth_2p0/seed_43/training_log.csv",
+            "metrics_sha256": "f4ca503092b52ae70fd7efd23b29503da2d8e44b0ac073666f2f6551862f74b8"
+          },
+          {
+            "seed": 44,
+            "overall_best_accuracy": 63.28132666077912,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/ssc/vth_2p0/seed_44/training_log.csv",
+            "metrics_sha256": "8c75327787baa5191ae019c3477f3eb2779c81803a83b80a54b5243afdb6e130"
+          }
+        ]
+      },
+      "manuscript_result": {
+        "table": 3,
+        "value_percent": 63.4,
+        "standard_deviation_percent": 0.13,
+        "metric": "accuracy",
+        "final_offset": 2.0,
+        "energy_mj": null,
+        "firing_rate": 0.123,
+        "firing_rate_standard_deviation": 0.003
+      }
+    }
+  ],
+  "weight_release_count": 0,
+  "locally_verified_weight_count": 2,
+  "log_release_count": 6,
+  "notes": [
+    "Historical peak values describe individual original training runs, not newly measured release benchmarks.",
+    "Six released TXT logs retain training/evaluation metrics; console tracebacks, warnings and setup output are excluded. Source and filtered-log hashes are recorded separately.",
+    "SDTv3 uses the vth=2 logarithmic-ramp train16 experiment. All 100 JSON epoch records are included; the original epoch-99 weight archive is not distributed.",
+    "The ResNet34 historical result remains in metadata; its log is not included in the current release.",
+    "All detection records now use final vth=2: GEN1 train110, PKU-DAVIS-SOD train41, DSEC-DET train151. Paper values and selected single-run metrics are recorded separately.",
+    "SHD/SSC manuscript accuracy uses the mean and sample standard deviation of five per-seed overall peaks. The released audio logs each represent one seed.",
+    "Weight filenames and hashes document local validation artifacts only. Model weights are not included in this repository."
+  ],
+  "manuscript": {
+    "file": "OI-LIF_public/OI_LIF_NN_\u7b2c\u5341\u4e8c\u7248.pdf",
+    "sha256": "11d398b5327648f36ffdc8ccb744150a5cb1a416ed99ca4422febc6093d99703",
+    "version": 12
+  }
+}

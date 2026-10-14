@@ -1,0 +1,3 @@
+action_recognition/logs/*.txt -text
+audio_classification/logs/*.txt -text
+object_detection/logs/*.txt -text
