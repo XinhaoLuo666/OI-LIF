@@ -10,21 +10,30 @@ PyTorch implementation of OI-LIF for event-based action recognition, object dete
 
 Datasets and model weights are obtained separately. Weight files, dataset directories, and generated training runs are excluded from Git.
 
-## Results
+## Main results
 
 The following values are reported in manuscript Tables 1–3 and recorded in [manuscript_alignment.json](manuscript_alignment.json).
 
-| Model | Dataset | Metric | Result (%) | Estimated energy (mJ) | Firing rate |
-|---|---|---|---:|---:|---:|
-| [SDTv3](action_recognition/logs/sdtv3_hardvs.txt) | HARDVS | Accuracy | 49.8 | 5.5 | — |
-| ResNet34 | HARDVS | Accuracy | 48.5 | 1.9 | — |
-| [SpikeYOLO](object_detection/logs/yolo_gen1.txt) | GEN1 | mAP50:95 | 46.7 | 7.2 | — |
-| [SpikeYOLO](object_detection/logs/yolo_dsec_det.txt) | DSEC-DET | mAP50:95 | 24.9 | 5.3 | — |
-| [SpikeYOLO](object_detection/logs/yolo_pku_davis_sod.txt) | PKU-DAVIS-SOD | mAP50:95 | 23.7 | 6.5 | — |
-| [Residual MLP](audio_classification/logs/shd.txt) | SHD | Accuracy | 75.73 ± 0.93 | — | 0.171 ± 0.006 |
-| [Residual MLP](audio_classification/logs/ssc.txt) | SSC | Accuracy | 63.40 ± 0.13 | — | 0.123 ± 0.003 |
+### Action recognition and object detection
 
-SHD and SSC values are the mean ± sample standard deviation over seeds 40–44; each included audio log represents one run. The log corresponding to the manuscript's ResNet34 result is not included.
+| Model | Dataset | Metric | Result (%) | Estimated energy (mJ) |
+|---|---|---|---:|---:|
+| [SDTv3](action_recognition/logs/sdtv3_hardvs.txt) | HARDVS | Accuracy | 49.8 | 5.5 |
+| ResNet34 | HARDVS | Accuracy | 48.5 | 1.9 |
+| [SpikeYOLO](object_detection/logs/yolo_gen1.txt) | GEN1 | mAP50:95 | 46.7 | 7.2 |
+| [SpikeYOLO](object_detection/logs/yolo_dsec_det.txt) | DSEC-DET | mAP50:95 | 24.9 | 5.3 |
+| [SpikeYOLO](object_detection/logs/yolo_pku_davis_sod.txt) | PKU-DAVIS-SOD | mAP50:95 | 23.7 | 6.5 |
+
+The log corresponding to the manuscript's ResNet34 result is not included.
+
+### Audio classification
+
+| Model | Dataset | Accuracy (%) | Firing rate |
+|---|---|---:|---:|
+| [Residual MLP](audio_classification/logs/shd.txt) | SHD | 75.73 ± 0.93 | 0.171 ± 0.006 |
+| [Residual MLP](audio_classification/logs/ssc.txt) | SSC | 63.40 ± 0.13 | 0.123 ± 0.003 |
+
+SHD and SSC values are the mean ± sample standard deviation over seeds 40–44; each included audio log represents one run.
 
 The archived GEN1 checkpoint was evaluated with this code on all **30,605 test samples**, obtaining **46.657% mAP50:95** and **74.957% mAP50**. See [gen1_validation.json](gen1_validation.json) for the protocol and comparison with the original implementation. Full training runs have not been repeated for this release.
 
