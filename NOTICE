@@ -1,0 +1,34 @@
+OILIF reproduction code and selected experiment archives
+
+Architectures and source provenance:
+
+* SDTv3 / E-SpikeFormer: adapted from the user's HARDVS experiment fork of
+  BICLab/Spike-Driven-Transformer-V3.
+  https://github.com/BICLab/Spike-Driven-Transformer-V3
+  Only the 19M HARDVS architecture is retained. Upstream notices and terms
+  continue to apply to third-party portions; this release does not assign
+  a new license to the upstream project.
+
+* SpikingJelly: the spiking ResNet34 architecture and neuron conventions
+  are adapted from clock_driven/model/spiking_resnet.py and neuron.py.
+  https://github.com/fangwei123456/spikingjelly
+  Retained license: LICENSE-SPIKINGJELLY.
+
+* Ultralytics / SpikeYOLO: detection blocks, loss, task-aligned assignment,
+  box operations and AP evaluation are adapted from the experimental
+  Ultralytics 8.0.197 fork. These sources retain AGPL-3.0 terms.
+  https://github.com/ultralytics/ultralytics
+  Retained license: LICENSE and object_detection/LICENSE.
+
+* Prophesee event format: object_detection/prepare.py follows the Apache-2.0
+  DAT format documented by the Prophesee automotive dataset toolbox.
+  Copyright (c) Prophesee S.A. Retained license: LICENSE-APACHE-2.0.
+
+* SHD/SSC preprocessing follows the historical experiment representation.
+  Raw data are obtained separately from https://zenkelab.org/resources/.
+
+New standalone glue code is covered by the root AGPL-3.0 license, subject to
+retained third-party terms above. Dataset licenses are separate. The two
+archived checkpoints documented in weights.json are the user's original
+experiments; their metadata and hashes are retained for provenance. Model
+weights, datasets and tracking exports are not included in this repository.

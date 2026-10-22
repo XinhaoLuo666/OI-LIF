@@ -1,0 +1,679 @@
+{
+  "date": "2026-10-14",
+  "environment": {
+    "python": "3.11.9",
+    "torch": "2.1.0+cu121",
+    "torchvision": "0.16.0+cu121",
+    "numpy": "1.26.0",
+    "timm": "0.6.13",
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "physical_gpu_index": 7
+  },
+  "scope": "GPU optimizer and real-data short training checks; not full-dataset convergence or historical benchmark reproduction.",
+  "procedure": [
+    "Run each available dataset entry point for two epochs with batch size 2 and 3 or 12 batches per epoch.",
+    "Use full default spatial/time dimensions: HARDVS 8x224x224, GEN1 4x320x320, DSEC-DET 4x640x640, audio 250x700.",
+    "Observe optimizer calls and assert finite unscaled gradients, nonzero gradients, finite parameters and effective parameter changes.",
+    "Preserve epoch-0 checkpoint, resume with the identical recipe, and compare final parameters, EMA parameters and epoch metrics exactly.",
+    "Evaluate best.pt through the independent CLI and compare its metrics exactly with the training-time best-checkpoint evaluation."
+  ],
+  "short_run_adjustments": [
+    "HARDVS learning-rate warmup is disabled and accumulation is 2 so a short run exercises effective updates.",
+    "ResNet34, GEN1 and DSEC-DET use final_offset=0.05 in the two-epoch check to represent an early training offset rather than completing a historical multi-hundred-epoch ramp in a few batches.",
+    "ResNet34 and detector checks use 12 batches per epoch to accommodate standard FP16 GradScaler adaptation. SDTv3 and audio checks use 3 batches per epoch.",
+    "HARDVS and detection training use --amp; SHD/SSC retain their default FP32 training. FP32 forward/backward/update checks also cover all six class configurations."
+  ],
+  "results": {
+    "sdtv3_hardvs": {
+      "data": "/public/liguoqi/lxh/data/HARDVS",
+      "entrypoint": "action_recognition/train.py",
+      "status": "passed",
+      "epochs": 2,
+      "batches_per_epoch": 3,
+      "real_data": true,
+      "history": [
+        {
+          "epoch": 0,
+          "offset": 1.0,
+          "lr": 0.00011274999999999999,
+          "train_loss": 5.700241406758626,
+          "train_accuracy": 33.333333333333336,
+          "selection": {
+            "accuracy": 100.0,
+            "loss": 5.703280448913574,
+            "samples": 6,
+            "mean_firing_rate": 7.841246239338303e-08,
+            "pulses": 68,
+            "neuron_step_positions": 867209088
+          },
+          "ema_selection": {
+            "accuracy": 100.0,
+            "loss": 5.703782558441162,
+            "samples": 6,
+            "mean_firing_rate": 1.0378120022653637e-08,
+            "pulses": 9,
+            "neuron_step_positions": 867209088
+          }
+        },
+        {
+          "epoch": 1,
+          "offset": 1.0,
+          "lr": 1.0981107418059316e-05,
+          "train_loss": 5.702549775441487,
+          "train_accuracy": 83.33333333333333,
+          "selection": {
+            "accuracy": 100.0,
+            "loss": 5.703186988830566,
+            "samples": 6,
+            "mean_firing_rate": 1.2373025315897058e-06,
+            "pulses": 1073,
+            "neuron_step_positions": 867209088
+          },
+          "ema_selection": {
+            "accuracy": 100.0,
+            "loss": 5.703782081604004,
+            "samples": 6,
+            "mean_firing_rate": 1.0378120022653637e-08,
+            "pulses": 9,
+            "neuron_step_positions": 867209088
+          }
+        }
+      ],
+      "successful_optimizer_steps": 4,
+      "max_parameter_update": 0.00014001847011968493,
+      "finite_gradients": true,
+      "checkpoint_saved": true,
+      "resume_parameter_match": true,
+      "resume_ema_match": true,
+      "resume_metrics_match": true,
+      "evaluation": {
+        "accuracy": 100.0,
+        "loss": 5.703280448913574,
+        "samples": 6,
+        "mean_firing_rate": 7.841246239338303e-08,
+        "pulses": 68,
+        "neuron_step_positions": 867209088
+      },
+      "reload_evaluation_match": true,
+      "training_command": [
+        "python",
+        "action_recognition/train.py",
+        "--device",
+        "cuda:0",
+        "--workers",
+        "0",
+        "--epochs",
+        "2",
+        "--ramp-epochs",
+        "1",
+        "--batch-size",
+        "2",
+        "--max-batches",
+        "3",
+        "--data",
+        "/public/liguoqi/lxh/data/HARDVS",
+        "--model",
+        "sdtv3",
+        "--warmup-epochs",
+        "0",
+        "--accumulation",
+        "2",
+        "--amp",
+        "--output",
+        "/tmp/oilif_validation_20261014_P1800p/sdtv3_hardvs"
+      ],
+      "minimum_nonzero_gradient_tensors": 1,
+      "minimum_changed_parameter_tensors": 328,
+      "minimum_parameter_update": 1.0246789315715432e-05
+    },
+    "resnet34_hardvs": {
+      "data": "/public/liguoqi/lxh/data/HARDVS",
+      "entrypoint": "action_recognition/train.py",
+      "status": "passed",
+      "epochs": 2,
+      "batches_per_epoch": 12,
+      "real_data": true,
+      "history": [
+        {
+          "epoch": 0,
+          "offset": 0.05,
+          "lr": 0.0001700136657368977,
+          "train_loss": 5.687699913978577,
+          "train_accuracy": 0.0,
+          "selection": {
+            "accuracy": 0.0,
+            "loss": 5.657106240590413,
+            "samples": 24,
+            "mean_firing_rate": 0.001424874406876527,
+            "pulses": 974613,
+            "neuron_step_positions": 683999232
+          },
+          "ema_selection": null
+        },
+        {
+          "epoch": 1,
+          "offset": 0.05,
+          "lr": 2.278993224615348e-06,
+          "train_loss": 5.670861919720967,
+          "train_accuracy": 0.0,
+          "selection": {
+            "accuracy": 0.0,
+            "loss": 5.588895082473755,
+            "samples": 24,
+            "mean_firing_rate": 0.03750977603436841,
+            "pulses": 25656658,
+            "neuron_step_positions": 683999232
+          },
+          "ema_selection": null
+        }
+      ],
+      "successful_optimizer_steps": 12,
+      "max_parameter_update": 0.0002987198531627655,
+      "finite_gradients": true,
+      "checkpoint_saved": true,
+      "resume_parameter_match": true,
+      "resume_ema_match": true,
+      "resume_metrics_match": true,
+      "evaluation": {
+        "accuracy": 0.0,
+        "loss": 5.657106240590413,
+        "samples": 24,
+        "mean_firing_rate": 0.001424874406876527,
+        "pulses": 974613,
+        "neuron_step_positions": 683999232
+      },
+      "reload_evaluation_match": true,
+      "training_command": [
+        "python",
+        "action_recognition/train.py",
+        "--device",
+        "cuda:0",
+        "--workers",
+        "0",
+        "--epochs",
+        "2",
+        "--ramp-epochs",
+        "1",
+        "--batch-size",
+        "2",
+        "--max-batches",
+        "3",
+        "--data",
+        "/public/liguoqi/lxh/data/HARDVS",
+        "--model",
+        "resnet34",
+        "--warmup-epochs",
+        "0",
+        "--accumulation",
+        "2",
+        "--ema-decay",
+        "0",
+        "--lr",
+        "0.0003",
+        "--schedule",
+        "cosine",
+        "--amp",
+        "--max-batches",
+        "12",
+        "--final-offset",
+        "0.05",
+        "--output",
+        "/tmp/oilif_validation_20261014_P1800p/resnet34_hardvs"
+      ],
+      "minimum_nonzero_gradient_tensors": 110,
+      "minimum_changed_parameter_tensors": 110,
+      "minimum_parameter_update": 2.384185791015625e-06
+    },
+    "shd": {
+      "data": "/9950backfile/lxh/shd/frames_number_250_split_by_number",
+      "entrypoint": "audio_classification/train.py",
+      "status": "passed",
+      "epochs": 2,
+      "batches_per_epoch": 3,
+      "real_data": true,
+      "history": [
+        {
+          "epoch": 0,
+          "offset": 1.5,
+          "lr": 0.005050000000000001,
+          "train_loss": 2.987311601638794,
+          "train_accuracy": 0.0,
+          "selection": {
+            "accuracy": 0.0,
+            "loss": 2.9985316594441733,
+            "samples": 6,
+            "mean_firing_rate": 7.8125e-05,
+            "pulses": 90,
+            "neuron_step_positions": 1152000
+          },
+          "ema_selection": null
+        },
+        {
+          "epoch": 1,
+          "offset": 1.5,
+          "lr": 0.0001,
+          "train_loss": 3.01805845896403,
+          "train_accuracy": 0.0,
+          "selection": {
+            "accuracy": 0.0,
+            "loss": 2.9812854131062827,
+            "samples": 6,
+            "mean_firing_rate": 0.00017621527777777777,
+            "pulses": 203,
+            "neuron_step_positions": 1152000
+          },
+          "ema_selection": null
+        }
+      ],
+      "successful_optimizer_steps": 6,
+      "max_parameter_update": 0.010013564489781857,
+      "finite_gradients": true,
+      "checkpoint_saved": true,
+      "resume_parameter_match": true,
+      "resume_ema_match": true,
+      "resume_metrics_match": true,
+      "evaluation": {
+        "accuracy": 0.0,
+        "loss": 2.9985316594441733,
+        "samples": 6,
+        "mean_firing_rate": 7.8125e-05,
+        "pulses": 90,
+        "neuron_step_positions": 1152000
+      },
+      "reload_evaluation_match": true,
+      "training_command": [
+        "python",
+        "audio_classification/train.py",
+        "--device",
+        "cuda:0",
+        "--workers",
+        "0",
+        "--epochs",
+        "2",
+        "--ramp-epochs",
+        "1",
+        "--batch-size",
+        "2",
+        "--max-batches",
+        "3",
+        "--data",
+        "/9950backfile/lxh/shd/frames_number_250_split_by_number",
+        "--dataset",
+        "shd",
+        "--seed",
+        "41",
+        "--output",
+        "/tmp/oilif_validation_20261014_P1800p/shd",
+        "--final-offset",
+        "1.5"
+      ],
+      "minimum_nonzero_gradient_tensors": 3,
+      "minimum_changed_parameter_tensors": 12,
+      "minimum_parameter_update": 0.0050428807735443115
+    },
+    "ssc": {
+      "data": "/9950backfile/msj/ssc",
+      "entrypoint": "audio_classification/train.py",
+      "status": "passed",
+      "epochs": 2,
+      "batches_per_epoch": 3,
+      "real_data": true,
+      "history": [
+        {
+          "epoch": 0,
+          "offset": 2.0,
+          "lr": 0.005050000000000001,
+          "train_loss": 3.5831312338511148,
+          "train_accuracy": 0.0,
+          "selection": {
+            "accuracy": 0.0,
+            "loss": 3.5465107758839927,
+            "samples": 6,
+            "mean_firing_rate": 0.002502604166666667,
+            "pulses": 2883,
+            "neuron_step_positions": 1152000
+          },
+          "ema_selection": null
+        },
+        {
+          "epoch": 1,
+          "offset": 2.0,
+          "lr": 0.0001,
+          "train_loss": 3.673555294672648,
+          "train_accuracy": 0.0,
+          "selection": {
+            "accuracy": 0.0,
+            "loss": 3.5662736097971597,
+            "samples": 6,
+            "mean_firing_rate": 0.0054835069444444445,
+            "pulses": 6317,
+            "neuron_step_positions": 1152000
+          },
+          "ema_selection": null
+        }
+      ],
+      "successful_optimizer_steps": 6,
+      "max_parameter_update": 0.010033844038844109,
+      "finite_gradients": true,
+      "checkpoint_saved": true,
+      "resume_parameter_match": true,
+      "resume_ema_match": true,
+      "resume_metrics_match": true,
+      "evaluation": {
+        "accuracy": 0.0,
+        "loss": 3.5465107758839927,
+        "samples": 6,
+        "mean_firing_rate": 0.002502604166666667,
+        "pulses": 2883,
+        "neuron_step_positions": 1152000
+      },
+      "reload_evaluation_match": true,
+      "training_command": [
+        "python",
+        "audio_classification/train.py",
+        "--device",
+        "cuda:0",
+        "--workers",
+        "0",
+        "--epochs",
+        "2",
+        "--ramp-epochs",
+        "1",
+        "--batch-size",
+        "2",
+        "--max-batches",
+        "3",
+        "--data",
+        "/9950backfile/msj/ssc",
+        "--dataset",
+        "ssc",
+        "--final-offset",
+        "2",
+        "--seed",
+        "40",
+        "--output",
+        "/tmp/oilif_validation_20261014_P1800p/ssc"
+      ],
+      "minimum_nonzero_gradient_tensors": 12,
+      "minimum_changed_parameter_tensors": 12,
+      "minimum_parameter_update": 0.0050690658390522
+    },
+    "yolo_gen1": {
+      "data": "/9950backfile/lxh/gen1_yolo_T4",
+      "entrypoint": "object_detection/train.py",
+      "status": "passed",
+      "epochs": 2,
+      "batches_per_epoch": 12,
+      "real_data": true,
+      "history": [
+        {
+          "epoch": 0,
+          "offset": 0.05,
+          "loss": [
+            5.669007778167725,
+            5.326704025268555,
+            3.966245174407959
+          ],
+          "map50": 0.0,
+          "map50_95": 0.0,
+          "samples": 24,
+          "mean_firing_rate": 0.00020751535359555179,
+          "pulses": 414767,
+          "neuron_step_positions": 1998729216
+        },
+        {
+          "epoch": 1,
+          "offset": 0.05,
+          "loss": [
+            5.4931960105896,
+            5.217031478881836,
+            3.771810293197632
+          ],
+          "map50": 0.0,
+          "map50_95": 0.0,
+          "samples": 24,
+          "mean_firing_rate": 0.0001499312651264112,
+          "pulses": 299672,
+          "neuron_step_positions": 1998729216
+        }
+      ],
+      "successful_optimizer_steps": 7,
+      "max_parameter_update": 0.03867197036743164,
+      "finite_gradients": true,
+      "checkpoint_saved": true,
+      "resume_parameter_match": true,
+      "resume_ema_match": true,
+      "resume_metrics_match": true,
+      "evaluation": {
+        "map50": 0.0,
+        "map50_95": 0.0,
+        "samples": 24,
+        "mean_firing_rate": 0.00020751535359555179,
+        "pulses": 414767,
+        "neuron_step_positions": 1998729216
+      },
+      "reload_evaluation_match": true,
+      "training_command": [
+        "python",
+        "object_detection/train.py",
+        "--device",
+        "cuda:0",
+        "--workers",
+        "0",
+        "--epochs",
+        "2",
+        "--ramp-epochs",
+        "1",
+        "--batch-size",
+        "2",
+        "--max-batches",
+        "3",
+        "--data",
+        "/9950backfile/lxh/gen1_yolo_T4",
+        "--amp",
+        "--max-batches",
+        "12",
+        "--final-offset",
+        "0.05",
+        "--output",
+        "/tmp/oilif_validation_20261014_P1800p/yolo_gen1"
+      ],
+      "minimum_nonzero_gradient_tensors": 369,
+      "minimum_changed_parameter_tensors": 127,
+      "minimum_parameter_update": 0.016092777252197266
+    },
+    "yolo_dsec_det": {
+      "data": "/9950backfile/lxh/DSEC_COCO_BALANCE_T4",
+      "entrypoint": "object_detection/train.py",
+      "status": "passed",
+      "epochs": 2,
+      "batches_per_epoch": 12,
+      "real_data": true,
+      "history": [
+        {
+          "epoch": 0,
+          "offset": 0.05,
+          "loss": [
+            6.159297466278076,
+            8.399205207824707,
+            4.177960395812988
+          ],
+          "map50": 0.0,
+          "map50_95": 0.0,
+          "samples": 24,
+          "mean_firing_rate": 0.00026240668199934607,
+          "pulses": 1780053,
+          "neuron_step_positions": 6783565824
+        },
+        {
+          "epoch": 1,
+          "offset": 0.05,
+          "loss": [
+            6.134930610656738,
+            7.659903526306152,
+            4.130135536193848
+          ],
+          "map50": 0.0,
+          "map50_95": 0.0,
+          "samples": 24,
+          "mean_firing_rate": 0.00024051377141910666,
+          "pulses": 1631541,
+          "neuron_step_positions": 6783565824
+        }
+      ],
+      "successful_optimizer_steps": 7,
+      "max_parameter_update": 0.08565568923950195,
+      "finite_gradients": true,
+      "checkpoint_saved": true,
+      "resume_parameter_match": true,
+      "resume_ema_match": true,
+      "resume_metrics_match": true,
+      "evaluation": {
+        "map50": 0.0,
+        "map50_95": 0.0,
+        "samples": 24,
+        "mean_firing_rate": 0.00026240668199934607,
+        "pulses": 1780053,
+        "neuron_step_positions": 6783565824
+      },
+      "reload_evaluation_match": true,
+      "training_command": [
+        "python",
+        "object_detection/train.py",
+        "--device",
+        "cuda:0",
+        "--workers",
+        "0",
+        "--epochs",
+        "2",
+        "--ramp-epochs",
+        "1",
+        "--batch-size",
+        "2",
+        "--max-batches",
+        "3",
+        "--data",
+        "/9950backfile/lxh/DSEC_COCO_BALANCE_T4",
+        "--image-size",
+        "640",
+        "--num-classes",
+        "2",
+        "--amp",
+        "--max-batches",
+        "12",
+        "--final-offset",
+        "0.05",
+        "--output",
+        "/tmp/oilif_validation_20261014_P1800p/yolo_dsec_det"
+      ],
+      "minimum_nonzero_gradient_tensors": 371,
+      "minimum_changed_parameter_tensors": 350,
+      "minimum_parameter_update": 0.028807640075683594
+    },
+    "yolo_pku_davis_sod": {
+      "data": "/9950backfile/lxh/pku_davis_sod_yolo_T4",
+      "entrypoint": "object_detection/train.py",
+      "status": "data_unavailable",
+      "reason": "PermissionError: [Errno 13] Permission denied: '/9950backfile/lxh/pku_davis_sod_yolo_T4/train'"
+    }
+  },
+  "synthetic_gpu_checks": [
+    "SDTv3 300 classes",
+    "ResNet34 300 classes",
+    "AudioNet 20 classes",
+    "AudioNet 35 classes",
+    "SpikeYOLO 2 classes",
+    "SpikeYOLO 3 classes, including class-2 targets"
+  ],
+  "fixed_issue": {
+    "file": "runtime.py",
+    "problem": "Independent classification evaluation preferred the separate EMA state even when best.pt selected and stored the raw model.",
+    "change": "Load classification weights from the selected model state; retain EMA selection for detector checkpoints with model_config.",
+    "regression_check": "SDTv3 best.pt independent evaluation now exactly matches training-time evaluation."
+  },
+  "full_dataset_retraining": false,
+  "artifacts_directory": "/tmp/oilif_validation_20261014_P1800p",
+  "release_weight_validation": {
+    "date": "2026-10-14",
+    "physical_gpu_index": 4,
+    "final_offset": 2.0,
+    "source_run": "sdtv3/train16",
+    "checkpoint_file": "action_recognition/weights/sdtv3_hardvs_oilif.pt",
+    "checkpoint_sha256": "603d5e9043d5114bac54cf9d8e1c8a5fe92a1791c5a089407ade09ca118b9c62",
+    "checkpoint_epoch": 99,
+    "log_file": "action_recognition/logs/sdtv3_hardvs.txt",
+    "log_sha256": "855d8ad8b0b2a5989a3d39c658b4c025dce30b0cbad4e46e13de092b7478905c",
+    "log_epochs": 100,
+    "historical_log_peak": 49.799334577643805,
+    "historical_checkpoint_metric": 49.7375909466601,
+    "original_reference_comparison": {
+      "checkpoint_epoch": 99,
+      "final_offset": 2.0,
+      "neuron_count": 105,
+      "real_samples": 2,
+      "input_shape": [
+        2,
+        8,
+        2,
+        224,
+        224
+      ],
+      "logits_max_abs_error": 0.0,
+      "predictions_equal": true,
+      "reference_firing_rule": "round(clamp(v-2,0,4))",
+      "passed": true
+    },
+    "real_data_short_evaluation": {
+      "accuracy": 0.0,
+      "loss": 6.1885223388671875,
+      "samples": 2,
+      "mean_firing_rate": 0.10620095577227161,
+      "pulses": 30699478,
+      "neuron_step_positions": 289069696
+    },
+    "automatic_evaluation_threshold_verified": true,
+    "original_archive_bytes_unchanged": true
+  },
+  "manuscript_alignment_report": "manuscript_alignment.json",
+  "release_gen1_weight_validation": {
+    "final_offset": 2.0,
+    "source_run": "yolo/train110",
+    "physical_gpu_index": 6,
+    "gpu_check": {
+      "physical_gpu_index": 6,
+      "final_offset": 2.0,
+      "offset_source": "train_metrics.threshold",
+      "neuron_count": 89,
+      "input_shape": [
+        1,
+        4,
+        3,
+        288,
+        352
+      ],
+      "prediction_shape": [
+        1,
+        6,
+        2079
+      ],
+      "finite_predictions": true,
+      "repeated_prediction_match": true,
+      "legacy_vth1_archive_recipe_preserved": true,
+      "checkpoint_metric": 0.46657,
+      "pulse_statistics": {
+        "mean_firing_rate": 0.06473676922527158,
+        "pulses": 10782606,
+        "neuron_step_positions": 166560768
+      },
+      "passed": true
+    },
+    "short_evaluation": {
+      "map50": 0.049478021978021994,
+      "map50_95": 0.013946459486804758,
+      "samples": 2,
+      "mean_firing_rate": 0.06483295634179592,
+      "pulses": 10798627,
+      "neuron_step_positions": 166560768
+    }
+  }
+}

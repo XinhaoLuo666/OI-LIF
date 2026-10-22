@@ -1,0 +1,345 @@
+{
+  "date": "2026-10-14",
+  "manuscript": {
+    "file": "OI-LIF_public/OI_LIF_NN_\u7b2c\u5341\u4e8c\u7248.pdf",
+    "sha256": "11d398b5327648f36ffdc8ccb744150a5cb1a416ed99ca4422febc6093d99703",
+    "version": 12
+  },
+  "results": {
+    "sdtv3_hardvs": {
+      "manuscript_result": {
+        "table": 1,
+        "value_percent": 49.8,
+        "standard_deviation_percent": null,
+        "metric": "accuracy",
+        "final_offset": 2.0,
+        "energy_mj": 5.5,
+        "firing_rate": null,
+        "firing_rate_standard_deviation": null
+      },
+      "selected_run": "sdtv3/train16",
+      "selected_run_peak": 49.799334577643805,
+      "selected_log": "action_recognition/logs/sdtv3_hardvs.txt",
+      "log_available": true,
+      "final_offset": 2.0,
+      "original_metric_values_unchanged": true,
+      "paper_rounding_match": true
+    },
+    "resnet34_hardvs": {
+      "manuscript_result": {
+        "table": 1,
+        "value_percent": 48.5,
+        "standard_deviation_percent": null,
+        "metric": "accuracy",
+        "final_offset": 1.0,
+        "energy_mj": 1.9,
+        "firing_rate": null,
+        "firing_rate_standard_deviation": null
+      },
+      "selected_run": "sdtv2_0707/resnet34_run54",
+      "selected_run_peak": 48.01024429050423,
+      "selected_log": "action_recognition/logs/resnet34_hardvs.txt",
+      "log_available": false,
+      "final_offset": 1.0,
+      "original_metric_values_unchanged": true,
+      "status": "Manuscript-reported result; corresponding released log is absent. The older unpublished selected-run metric is retained separately."
+    },
+    "yolo_gen1": {
+      "manuscript_result": {
+        "table": 2,
+        "value_percent": 46.7,
+        "standard_deviation_percent": null,
+        "metric": "mAP50:95",
+        "final_offset": 2.0,
+        "energy_mj": 7.2,
+        "firing_rate": null,
+        "firing_rate_standard_deviation": null
+      },
+      "selected_run": "yolo/train110",
+      "selected_run_peak": 0.46657,
+      "selected_log": "object_detection/logs/yolo_gen1.txt",
+      "log_available": true,
+      "final_offset": 2.0,
+      "original_metric_values_unchanged": true,
+      "paper_rounding_match": true,
+      "source_verification": {
+        "run": 110,
+        "archive": "yolov8_aug/wandb/offline-run-20241215_205226-72kikhx4/run-72kikhx4.wandb",
+        "archive_sha256": "56f43ed3ae10b245d9bd040c3b1057d76eca54ca3eb9a90e18b8a1780b01a572",
+        "run_id": "72kikhx4",
+        "raw_record_count": 362633,
+        "raw_sha256": "03b793747b07712e8f30121e0e6ad11ed398432aae87740fd503eb46897f4615",
+        "raw_bytes": 51473437,
+        "output_sha256": "501ad0042b56145a5155f26597f222a68281ea702907ae4fa5beef734696d207",
+        "output_bytes": 51189,
+        "epochs": 200,
+        "retained_lines": 600,
+        "validation_rows": 203,
+        "best_epoch": 200,
+        "best_map50": 0.74957,
+        "best_map50_95": 0.46657,
+        "offset_at_best": 2.0,
+        "metrics_source": "yolov8_aug/runs/detect/train110/results.csv",
+        "metrics_sha256": "b7963698b644a230f456584a0e0b4ea03ee8c2347e847a3cff54d2374527cf6f"
+      }
+    },
+    "yolo_dsec_det": {
+      "manuscript_result": {
+        "table": 2,
+        "value_percent": 24.9,
+        "standard_deviation_percent": null,
+        "metric": "mAP50:95",
+        "final_offset": 2.0,
+        "energy_mj": 5.3,
+        "firing_rate": null,
+        "firing_rate_standard_deviation": null
+      },
+      "selected_run": "yolo/train151",
+      "selected_run_peak": 0.24882,
+      "selected_log": "object_detection/logs/yolo_dsec_det.txt",
+      "log_available": true,
+      "final_offset": 2.0,
+      "original_metric_values_unchanged": true,
+      "paper_rounding_match": true,
+      "source_verification": {
+        "run": 151,
+        "archive": "yolov8_aug/wandb/offline-run-20250103_000025-r69txhom/run-r69txhom.wandb",
+        "archive_sha256": "fa45ac2056e72cc9e2cbc1231c4654f8168839ae37fd4271713f1253576da7f1",
+        "run_id": "r69txhom",
+        "raw_record_count": 88823,
+        "raw_sha256": "b81f7a7f3a4a12f482053308414cbe421a15793758c6899ea2c20e1c730fa0f4",
+        "raw_bytes": 12502986,
+        "output_sha256": "bc30c5ddeb3ee1336c21bd1b12e8e433dc65c20d7ceb6f9fa948178835a50851",
+        "output_bytes": 26034,
+        "epochs": 100,
+        "retained_lines": 305,
+        "validation_rows": 103,
+        "best_epoch": 99,
+        "best_map50": 0.41775,
+        "best_map50_95": 0.24882,
+        "offset_at_best": 2.0,
+        "metrics_source": "yolov8_aug/runs/detect/train151/results.csv",
+        "metrics_sha256": "50e5556ceaa4b824fc09c89fc6ecd0f446083fe99aad6c4fd20b74bb4421dd51"
+      }
+    },
+    "yolo_pku_davis_sod": {
+      "manuscript_result": {
+        "table": 2,
+        "value_percent": 23.7,
+        "standard_deviation_percent": null,
+        "metric": "mAP50:95",
+        "final_offset": 2.0,
+        "energy_mj": 6.5,
+        "firing_rate": null,
+        "firing_rate_standard_deviation": null
+      },
+      "selected_run": "yolo/train41",
+      "selected_run_peak": 0.23653,
+      "selected_log": "object_detection/logs/yolo_pku_davis_sod.txt",
+      "log_available": true,
+      "final_offset": 2.0,
+      "original_metric_values_unchanged": true,
+      "paper_rounding_match": true,
+      "source_verification": {
+        "run": 41,
+        "archive": "yolov8_aug/wandb/offline-run-20241104_120607-an7ifzk6/run-an7ifzk6.wandb",
+        "archive_sha256": "01883fa103f8c42b7acb6d1c7fc9d78febb952e83e88062b17f236b3827213c3",
+        "run_id": "an7ifzk6",
+        "raw_record_count": 79351,
+        "raw_sha256": "2ff6279ef26081ceabefa4e352c83b6aa25d2d67ef9447774d4681e741698ffc",
+        "raw_bytes": 11071799,
+        "output_sha256": "4d20a3fce26e20ef2b9f8d6191f585b24d7b19ebaa49a25a49c3da2f1cb109be",
+        "output_bytes": 51723,
+        "epochs": 200,
+        "retained_lines": 606,
+        "validation_rows": 204,
+        "best_epoch": 194,
+        "best_map50": 0.47604,
+        "best_map50_95": 0.23653,
+        "offset_at_best": 2.0,
+        "metrics_source": "yolov8_aug/runs/detect/train41/results.csv",
+        "metrics_sha256": "89104bac13ea317e1978d1d3ffdec2d5037638e9140baeee80972e820d510ebf"
+      }
+    },
+    "shd": {
+      "manuscript_result": {
+        "table": 3,
+        "value_percent": 75.73,
+        "standard_deviation_percent": 0.93,
+        "metric": "accuracy",
+        "final_offset": 2.0,
+        "energy_mj": null,
+        "firing_rate": 0.171,
+        "firing_rate_standard_deviation": 0.006
+      },
+      "selected_run": "verified_legacy_sweep/shd/offset2.0/seed41",
+      "selected_run_peak": 75.61837456,
+      "selected_log": "audio_classification/logs/shd.txt",
+      "log_available": true,
+      "final_offset": 2.0,
+      "original_metric_values_unchanged": true,
+      "paper_statistics_match": true,
+      "five_seed_statistics": {
+        "final_offset": 2.0,
+        "seeds": [
+          40,
+          41,
+          42,
+          43,
+          44
+        ],
+        "selection": "Maximum test accuracy over all 20 epochs per seed",
+        "mean_accuracy": 75.73321554770318,
+        "sample_std_accuracy": 0.9289279860335787,
+        "runs": [
+          {
+            "seed": 40,
+            "overall_best_accuracy": 76.01590106007068,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/shd/vth_2p0/seed_40/training_log.csv",
+            "metrics_sha256": "2c223f2f356bd6ee943b25ebe541749856806c0a0e11ed0210a139c04cd2ede6"
+          },
+          {
+            "seed": 41,
+            "overall_best_accuracy": 75.61837455830388,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/shd/vth_2p0/seed_41/training_log.csv",
+            "metrics_sha256": "85bcd78d5e8965e03d714bbfb69f911ddc05a24fdacde500bdafba46310419aa"
+          },
+          {
+            "seed": 42,
+            "overall_best_accuracy": 76.63427561837456,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/shd/vth_2p0/seed_42/training_log.csv",
+            "metrics_sha256": "bb33a5edf1c0daabfa58d4b979b2fd2fd3d02a8e01862c2d2fa32c90494566a4"
+          },
+          {
+            "seed": 43,
+            "overall_best_accuracy": 76.19257950530036,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/shd/vth_2p0/seed_43/training_log.csv",
+            "metrics_sha256": "777c5b91cd08c5e75fff667747de0024f18fbd2c8d868b9fcdc0372c4176b0b9"
+          },
+          {
+            "seed": 44,
+            "overall_best_accuracy": 74.20494699646643,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/shd/vth_2p0/seed_44/training_log.csv",
+            "metrics_sha256": "d9f86e066ef58b51ae3fa151ca29cf2fded2d8f3b89e6a632c709b3d5288bdc9"
+          }
+        ]
+      }
+    },
+    "ssc": {
+      "manuscript_result": {
+        "table": 3,
+        "value_percent": 63.4,
+        "standard_deviation_percent": 0.13,
+        "metric": "accuracy",
+        "final_offset": 2.0,
+        "energy_mj": null,
+        "firing_rate": 0.123,
+        "firing_rate_standard_deviation": 0.003
+      },
+      "selected_run": "verified_legacy_sweep/ssc/offset2.0/seed40",
+      "selected_run_peak": 63.57570405,
+      "selected_log": "audio_classification/logs/ssc.txt",
+      "log_available": true,
+      "final_offset": 2.0,
+      "original_metric_values_unchanged": true,
+      "paper_statistics_match": true,
+      "five_seed_statistics": {
+        "final_offset": 2.0,
+        "seeds": [
+          40,
+          41,
+          42,
+          43,
+          44
+        ],
+        "selection": "Maximum test accuracy over all 20 epochs per seed",
+        "mean_accuracy": 63.3971151015602,
+        "sample_std_accuracy": 0.12876557513354125,
+        "runs": [
+          {
+            "seed": 40,
+            "overall_best_accuracy": 63.57570405259543,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/ssc/vth_2p0/seed_40/training_log.csv",
+            "metrics_sha256": "2e837915d14af97732201afa2abd338704bc51760b31f5d784e386d6fde6a0c1"
+          },
+          {
+            "seed": 41,
+            "overall_best_accuracy": 63.42851535668727,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/ssc/vth_2p0/seed_41/training_log.csv",
+            "metrics_sha256": "f0ee4542114205a35794297c0de82387d134d5309de727f2e6f35effbb122735"
+          },
+          {
+            "seed": 42,
+            "overall_best_accuracy": 63.43832793641448,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/ssc/vth_2p0/seed_42/training_log.csv",
+            "metrics_sha256": "813bc12daf82eb9078570189615178f64f295658e5f5a094a0cb1da2a2433463"
+          },
+          {
+            "seed": 43,
+            "overall_best_accuracy": 63.2617015013247,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/ssc/vth_2p0/seed_43/training_log.csv",
+            "metrics_sha256": "f4ca503092b52ae70fd7efd23b29503da2d8e44b0ac073666f2f6551862f74b8"
+          },
+          {
+            "seed": 44,
+            "overall_best_accuracy": 63.28132666077912,
+            "source_metrics": "../ssc_shd_log_threshold_sweep/runs/ssc/vth_2p0/seed_44/training_log.csv",
+            "metrics_sha256": "8c75327787baa5191ae019c3477f3eb2779c81803a83b80a54b5243afdb6e130"
+          }
+        ]
+      }
+    }
+  },
+  "interpretation": "README reports manuscript Tables 1-3. Source logs preserve actual single-run metrics; audio manuscript values are five-seed mean +/- sample standard deviation.",
+  "detection_final_offset": 2.0,
+  "shd_final_offset": 2.0,
+  "gen1_original_archive_gpu_check": {
+    "physical_gpu_index": 6,
+    "final_offset": 2.0,
+    "offset_source": "train_metrics.threshold",
+    "neuron_count": 89,
+    "input_shape": [
+      1,
+      4,
+      3,
+      288,
+      352
+    ],
+    "prediction_shape": [
+      1,
+      6,
+      2079
+    ],
+    "finite_predictions": true,
+    "repeated_prediction_match": true,
+    "legacy_vth1_archive_recipe_preserved": true,
+    "checkpoint_metric": 0.46657,
+    "pulse_statistics": {
+      "mean_firing_rate": 0.06473676922527158,
+      "pulses": 10782606,
+      "neuron_step_positions": 166560768
+    },
+    "passed": true
+  },
+  "gen1_short_evaluation": {
+    "map50": 0.049478021978021994,
+    "map50_95": 0.013946459486804758,
+    "samples": 2,
+    "mean_firing_rate": 0.06483295634179592,
+    "pulses": 10798627,
+    "neuron_step_positions": 166560768
+  },
+  "artifacts_directory": "/tmp/oilif_manuscript_alignment_20261014_49i3qN",
+  "limitations": [
+    "The ResNet34 value 48.5% is quoted from manuscript Table 1; its corresponding log is not released.",
+    "No full-dataset training or benchmark evaluation was repeated during this manuscript alignment."
+  ],
+  "readme_result_columns": [
+    "Model",
+    "Dataset",
+    "Accuracy / mAP50:95 (%)",
+    "Energy (mJ)",
+    "Firing rate"
+  ],
+  "energy_and_firing_rate_source": "Manuscript v12, Tables 1-3; energy is estimated, audio firing-rate values are reported mean +/- standard deviation."
+}

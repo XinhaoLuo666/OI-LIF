@@ -1,0 +1,182 @@
+{
+  "date": "2026-10-14",
+  "scope": "Released GEN1 checkpoint; SDTv3 work suspended at user request.",
+  "environment": {
+    "python": "3.11.9",
+    "torch": "2.1.0+cu121",
+    "torchvision": "0.16.0+cu121",
+    "numpy": "1.26.0",
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "physical_gpu_indices": [
+      6,
+      7
+    ]
+  },
+  "checkpoint": {
+    "file": "object_detection/weights/gen1_oilif.pt",
+    "sha256": "b1e6fc7f4bc110f306b65659fe3f740d5c9d1f76a20a4079b774047cea090a56",
+    "original_archive_unchanged": true,
+    "source_file": "yolov8_aug/runs/detect/train110/weights/best.pt",
+    "recorded_map50": 0.74957,
+    "recorded_map50_95": 0.46657
+  },
+  "neurons": {
+    "count": 89,
+    "threshold": 2.0,
+    "maximum_D": 4,
+    "all_original_and_public_thresholds_equal": true,
+    "all_original_and_public_maximum_D_equal": true,
+    "threshold_preserved_after_reset": true,
+    "tau": 2.0,
+    "decay_input": true,
+    "firing_rule": "q = round(clamp(u - 2, 0, 4))",
+    "soft_reset_rule": "v = u - q",
+    "saturation_probe_max": 4.0,
+    "unit_reset_probe_input": [
+      20,
+      0,
+      0,
+      20
+    ],
+    "unit_reset_probe_output": [
+      4,
+      1,
+      0,
+      4
+    ],
+    "per_neuron_report": "gen1_neuron_audit.json"
+  },
+  "original_public_prediction_comparison": {
+    "physical_gpu_index": 7,
+    "real_samples": 1,
+    "input_shape": [
+      1,
+      4,
+      3,
+      288,
+      352
+    ],
+    "fp32_max_abs_error": 0.0,
+    "fp16_max_abs_error": 0.0,
+    "passed": true
+  },
+  "data_parity": {
+    "samples": 3,
+    "max_pixel_error": 0.0,
+    "max_normalized_label_error": 7.450580596923828e-08
+  },
+  "evaluation_protocol": {
+    "split": "test",
+    "data_root": "/9950backfile/lxh/gen1_yolo_T4",
+    "samples": 30605,
+    "image_size": 320,
+    "time_steps": 4,
+    "layout": "WHC",
+    "reverse_time": true,
+    "rectangular_padding": true,
+    "batch_size": 140,
+    "precision": "float16",
+    "confidence": 0.001,
+    "nms_iou": 0.7,
+    "max_detections": 300,
+    "threshold": 2.0,
+    "maximum_D": 4
+  },
+  "before_evaluation_fix": {
+    "map50": 0.6753188258035934,
+    "map50_95": 0.43258845576512267,
+    "samples": 30605,
+    "mean_firing_rate": 0.08275325546651208,
+    "pulses": 210921179125,
+    "neuron_step_positions": 2548796152320
+  },
+  "original_reference_full_test": {
+    "metrics/precision(B)": 0.7868291021369553,
+    "metrics/recall(B)": 0.7041516540776314,
+    "metrics/mAP50(B)": 0.7495673676902509,
+    "metrics/mAP50-95(B)": 0.4665712539569464,
+    "fitness": 0.49487086533027685,
+    "samples": 30605,
+    "elapsed_seconds": 280.83652644231915,
+    "precision": "float16",
+    "batch_size": 140,
+    "restored_legacy_forward_classes": [
+      "SepConv",
+      "MS_ConvBlock",
+      "MS_AllConvBlock",
+      "RepConv",
+      "SepRepConv",
+      "BNAndPadLayer"
+    ]
+  },
+  "released_code_full_test": {
+    "map50": 0.7495702104129869,
+    "map50_95": 0.4665699503597476,
+    "samples": 30605,
+    "mean_firing_rate": 0.08276713080250857,
+    "pulses": 210956544528,
+    "neuron_step_positions": 2548796152320
+  },
+  "difference_from_original_reference": {
+    "map50": 2.8427227359850704e-06,
+    "map50_95": -1.3035971987984674e-06
+  },
+  "matches_checkpoint_metric_to_recorded_precision": true,
+  "matches_manuscript_46p7_percent": true,
+  "fixes": [
+    "Use original FP16 evaluation for native YOLO archives; --no-half selects FP32.",
+    "Use ceil-based resize dimensions and floating label padding from the original reader.",
+    "Restore boxes to sensor coordinates and clip both predictions and targets before IoU matching.",
+    "Preserve original NMS candidate order, class offsets and IoU assignment.",
+    "Move or rebuild cached anchor tensors after model dtype/device changes."
+  ],
+  "original_reference_notes": "The active local YOLO fork has changed since the archive was saved. Six forward methods were restored process-locally from the retained coco fork to match the archived module layout; no original source or weight file was edited.",
+  "command": [
+    "CUDA_VISIBLE_DEVICES=6",
+    "python",
+    "object_detection/train.py",
+    "--data",
+    "/9950backfile/lxh/gen1_yolo_T4",
+    "--eval",
+    "object_detection/weights/gen1_oilif.pt",
+    "--batch-size",
+    "140",
+    "--half",
+    "--workers",
+    "8",
+    "--output",
+    "runs/gen1_eval"
+  ],
+  "prediction_cli": {
+    "real_sample": "img_18-03-29_13-15-02_61500000_12150000080.npy",
+    "confidence": 0.25,
+    "passed": true,
+    "physical_gpu_index": 6,
+    "boxes": 3,
+    "all_sensor_bounds_valid": true
+  },
+  "validated_code_sha256": {
+    "runtime.py": "35129ed77a16b5eeb9782280ecce2924aa601168b839340d60aa775551e0fe7f",
+    "object_detection/model.py": "4b7a75937bc65521819ad0dd09a74ccf2a79782f5366980f5e5d21028c4322ba",
+    "object_detection/dataset.py": "91f7fff3f527f62ec784dd98e4f9197ecfef6c0fa53de07db0890a7663aa9d65",
+    "object_detection/evaluate.py": "1fe55e2fac5b631d425d2a13ebc73e680e54a1296ac37183aa9186e9c253e7b3",
+    "object_detection/train.py": "cbad8f2b5d63cbc956f5a8857dfff6ff4e99c86bc01118b297c5f1cf8d7268ca",
+    "object_detection/predict.py": "dac06c0b50dfa7b942805bfb5835450604eece48f0b4e333263fa81f9f44718c"
+  },
+  "training_regression": {
+    "physical_gpu_index": 7,
+    "precision": "float32",
+    "real_samples": 2,
+    "optimizer_steps": 1,
+    "final_offset": 2.0,
+    "all_parameters_finite": true,
+    "max_parameter_change": 0.011528369039297104,
+    "loss": [
+      4.838160514831543,
+      4.913715839385986,
+      4.159083843231201
+    ],
+    "passed": true,
+    "scope": "One optimizer step on two real test frames used only as diagnostic data; not a training-accuracy experiment."
+  }
+}

@@ -1,0 +1,1522 @@
+{
+  "neurons": 89,
+  "all_thresholds_equal_2": true,
+  "all_max_d_equal_4": true,
+  "threshold_survives_reset": true,
+  "unit_soft_reset_verified": true,
+  "per_neuron": [
+    {
+      "name": "model.2.Conv.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.2.Conv.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.2.Conv.lif3",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.2.conv1.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.2.conv2.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.3.encode_lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.4.0.Conv.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.4.0.Conv.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.4.0.Conv.lif3",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.4.0.conv1.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.4.0.conv2.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.4.1.Conv.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.4.1.Conv.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.4.1.Conv.lif3",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.4.1.conv1.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.4.1.conv2.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.5.encode_lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.6.0.Conv.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.6.0.Conv.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.6.0.Conv.lif3",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.6.0.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.6.0.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.6.1.Conv.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.6.1.Conv.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.6.1.Conv.lif3",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.6.1.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.6.1.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.6.2.Conv.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.6.2.Conv.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.6.2.Conv.lif3",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.6.2.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.6.2.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.7.encode_lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.8.Conv.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.8.Conv.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.8.Conv.lif3",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.8.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.8.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.9.cv1.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.9.cv2.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.10.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.12.Conv.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.12.Conv.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.12.Conv.lif3",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.12.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.12.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.14.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.16.Conv.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.16.Conv.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.16.Conv.lif3",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.16.conv1.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.16.conv2.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.18.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.19.Conv.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.19.Conv.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.19.Conv.lif3",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.19.conv1.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.19.conv2.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.20.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.22.Conv.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.22.Conv.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.22.Conv.lif3",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.22.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.22.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.23.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.25.Conv.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.25.Conv.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.25.Conv.lif3",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.25.lif1",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.25.lif2",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv2.0.0.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv2.0.1.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv2.0.2.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv2.1.0.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv2.1.1.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv2.1.2.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv2.2.0.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv2.2.1.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv2.2.2.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv3.0.0.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv3.0.1.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv3.0.2.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv3.1.0.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv3.1.1.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv3.1.2.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv3.2.0.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv3.2.1.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.cv3.2.2.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    },
+    {
+      "name": "model.26.dfl.lif",
+      "native_threshold": 2.0,
+      "public_threshold": 2.0,
+      "native_max_d": 4.0,
+      "public_max_d": 4,
+      "tau": 2.0,
+      "decay_input": true,
+      "reset_mode": "soft",
+      "threshold_after_reset": 2.0,
+      "probe_output": [
+        4.0,
+        1.0,
+        0.0,
+        4.0
+      ]
+    }
+  ]
+}
